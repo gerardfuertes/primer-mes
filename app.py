@@ -6,6 +6,39 @@ st.set_page_config(
     layout="centered"
 )
 
+st.markdown("""
+<style>
+
+.main {
+    background: linear-gradient(
+        180deg,
+        #fff5f7 0%,
+        #ffe6ec 100%
+    );
+}
+
+h1 {
+    color: #e63976 !important;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #d63384 !important;
+}
+
+.stButton > button {
+    background-color: #ff4d88;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 # Inicializar variables
 if "pregunta" not in st.session_state:
     st.session_state.pregunta = 0
@@ -52,6 +85,14 @@ if st.session_state.pregunta == 0 and not st.session_state.autenticado:
 
     st.title("El primer mes de dos personas separadas por fronteras ❤️")
 
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.image(
+            "hola.jpeg",
+            width=350
+        )
+
     st.markdown("""
     ## Hola peque :)
 
@@ -81,7 +122,38 @@ if st.session_state.pregunta == 0 and not st.session_state.autenticado:
 
 elif st.session_state.autenticado == "password":
 
-    st.title("🔐 Acceso restringido")
+    st.markdown(
+    """
+    <h1 style="text-align:center;color:#ff4d88;">
+        🔐 Acceso restringido 🔐
+    </h1>
+
+    <h4 style="text-align:center;">
+        Solo Lucia puede continuar ❤️
+    </h4>
+    """,
+    unsafe_allow_html=True
+)
+
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+
+    with col2:
+        st.image(
+            "https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif",
+            width=250
+        )
+
+    st.markdown(
+    """
+    <div style="text-align:center;font-size:20px;">
+        ❤️ ✨ ❤️ ✨ ❤️
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
     st.markdown("""
     Ups, hecha el freno madaleno, donde te penabas que ibas. Con tal de aegurarme de que eres la Lucia a la que tanto me quiero
@@ -171,6 +243,18 @@ else:
     )
 
     st.markdown("---")
+
+    st.balloons()
+    st.snow()
+
+    st.markdown(
+        """
+        <h1 style='text-align:center;'>
+        🎉 Has desbloqueado tu recompensa 🎉
+        </h1>
+        """,
+        unsafe_allow_html=True
+    )
 
     if st.button("💌 Reflexiones de un amor separado por fronteras"):
 
