@@ -236,7 +236,7 @@ else:
 
     st.balloons()
 
-    st.title("Felicidades 🎉")
+    st.title("Oleeee")
 
     st.success(
         "Parece que por lo menos los basicos los tienes claros jajajajajaja. Aquí tienes tu recompensa, como tu dirias es algo muy ñoño, pero espero que te guste."
@@ -244,13 +244,11 @@ else:
 
     st.markdown("---")
 
-    st.balloons()
-    st.snow()
 
     st.markdown(
         """
         <h1 style='text-align:center;'>
-        🎉 Has desbloqueado tu recompensa 🎉
+        Estas lista para leer una ñoñeria?
         </h1>
         """,
         unsafe_allow_html=True
